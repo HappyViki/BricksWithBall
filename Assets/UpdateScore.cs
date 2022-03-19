@@ -2,10 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class RemoveBrick : MonoBehaviour
+public class UpdateScore : Score
 {
     void OnTriggerEnter(Collider col)
     {
-        Destroy(this.gameObject);
+        UpdateScore();
     }
 }

@@ -7,16 +7,15 @@ public class ResetGame : MonoBehaviour
     GameObject player;
     GameObject ball;
 
-    // Start is called before the first frame update
     void Start()
     {
         player = GameObject.Find("Player");
         ball = GameObject.Find("Ball");
     }
 
-    // Update is called once per frame
     void Update()
     {
+        // Reset game back to playable state
         if (ball.transform.position.y < -10f) {
             player.transform.position = new Vector3(0, 0, 0);
             ball.transform.position = new Vector3(0, 3, 0);

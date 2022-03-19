@@ -7,21 +7,19 @@ public class Score : MonoBehaviour
 {
     public int score = 0;
 
-    // Start is called before the first frame update
     void Start()
     {
-        this.GetComponent<UnityEngine.UI.Text>().text = "Score: " + score.ToString();
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        DisplayScore();
     }
 
     public void UpdateScore()
     {
         score++;
-        this.GetComponent<UnityEngine.UI.Text>().text = "Score: " + score.ToString();
+        DisplayScore();
+    }
+
+    void DisplayScore()
+    {
+        GameObject.Find("/Canvas/Score").GetComponent<UnityEngine.UI.Text>().text = "Score: " + score.ToString();
     }
 }
